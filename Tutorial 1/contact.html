@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Boris Vasilev - Contact"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://borisonekenobi.github.io/Portfolio">
+    <meta property="og:description" content="Contact Information">
+    <meta property="og:image" content="https://borisonekenobi.github.io/Portfolio/resources/contact.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+	<title>Contact</title>
+</head>
+<body>
+    <div class="topnav">
+        <a href="./home.html">Home</a>
+        <a href="./projects.html">Projects</a>
+        <a class="active" href="./contact.html">Contact</a>
+        <a href="./terminal.html" style="float: right;">Terminal</a>
+    </div>
+    <div class="contact">
+        <div style="text-align:center">
+          <h1 class="titleName">Contact Me</h2>
+        </div>
+        <div class="column">
+            <label class="titleText" for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
+            <label class="titleText" for="email">Email Address</label>
+            <input type="text" id="email" name="emailaddress" placeholder="Your email">
+            <label class="titleText" for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Add a message" style="height:170px"></textarea>
+            <input id="submitBtn" type="submit" onfocus="hoverSubmit()" onmouseenter="hoverSubmit()" onmouseleave="leaveSubmit()" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div class="minikit" onmouseenter="playRing()" onmouseleave="stopRing()" onclick="playCollect()">
+        <img id="minikitImg" class="minikitImg" src="./resources/minikit-spin.gif" alt="minikit" style="opacity: 0%;">
+        <audio id="ringAudio">
+            <source src="./resources/minikit-ring.mp3">
+            Your browser does not support the audio tag.
+        </audio>
+        <audio id="collectAudio">
+            <source src="./resources/minikit-collect.mp3">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+    <div class="footer">
+        <p>© 2023 Boris Vasilev.</p>
+    </div>
+    <script>
+        function hoverSubmit() {
+            nameInput = document.getElementById('name');
+            emailInput = document.getElementById('email');
+            msgInput = document.getElementById('message');
+
+            name = nameInput.value;
+            email = emailInput.value;
+            msg = msgInput.value;
+
+            let err = false;
+
+            if (name == '') { nameInput.style.border = '1px solid #FF0000'; err = true }
+            else { nameInput.style.border = '1px solid #ccc'; }
+            if (email == '') { emailInput.style.border = '1px solid #FF0000'; err = true }
+            else { emailInput.style.border = '1px solid #ccc'; }
+            if (msg == '') { msgInput.style.border = '1px solid #FF0000'; err = true }
+            else { msgInput.style.border = '1px solid #ccc'; }
+
+            if (err) return;
+
+            submitBtn = document.getElementById('submitBtn');
+            submitBtn.value = "Don't send me emails please";
+        }
+
+        function leaveSubmit() {
+            submitBtn = document.getElementById('submitBtn');
+            submitBtn.value = "Submit";
+        }
+    </script>
+    <script>
+        function playRing() {
+            var audio = document.getElementById("ringAudio");
+            audio.loop = true;
+            audio.play();
+
+            var img = document.getElementById("minikitImg");
+            img.style.opacity = 1;
+        }
+
+        function stopRing() {
+            var audio = document.getElementById("ringAudio");
+            audio.loop = false;
+
+            var img = document.getElementById("minikitImg");
+            img.style.opacity = 0;
+        }
+
+        function playCollect() {
+            document.getElementById("collectAudio").play();
+        }
+    </script>
+</body>
+</html>

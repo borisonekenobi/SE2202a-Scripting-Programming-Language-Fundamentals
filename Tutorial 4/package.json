@@ -1,0 +1,14 @@
+{
+  "name": "tutorial_4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Tutorial_4.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.0.1"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "miniproject2",
+  "version": "1.0.0",
+  "description":"",
+  "main": "movieAnalysis.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.0.1"
+  },
+  "author": "",
+  "license": "ISC"
+}

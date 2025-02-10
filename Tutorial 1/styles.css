@@ -1,0 +1,241 @@
+:root {
+    font-family: JetBrains Mono;
+    font-size: 22px;
+    --main-fg-color: #d7d7d7;
+    --main-bg-color: #1f1f1f;
+    --scrollbar-bg: var(--main-bg-color);
+	--scrollbar-fg: #555555;
+	--scrollbar-fg-hover: var(--main-fg-color);
+}
+
+body {
+    background-color: var(--main-bg-color)
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	background-color: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 2.5px;
+	background: var(--scrollbar-fg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--scrollbar-fg-hover);
+}
+
+.topnav {
+    background-color: #181818;
+    overflow: hidden;
+    border-radius: 25px;
+
+}
+
+.topnav a {
+    float: left;
+    color: #868686;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    color: var(--main-fg-color);
+}
+
+.topnav a.active {
+    background-color: #D40000;
+    color: var(--main-fg-color);
+}
+
+.profileWrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.profilePic {
+    border-radius: 100%;
+    background-color: dimgray;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 200px;
+}
+
+.profileName {
+    text-align: center;
+    color: var(--main-fg-color);
+    font-size: 44px;
+}
+
+.profileText {
+    text-align: left;
+    color: var(--main-fg-color);
+    font-size: 20px;
+}
+
+.fadeIn {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+.titlebar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.titleName {
+    text-align: center;
+    color: var(--main-fg-color);
+    font-size: 44px;
+}
+
+.titleText {
+    text-align: left;
+    color: var(--main-fg-color);
+    font-size: 20px;
+}
+
+.github:link {
+    text-decoration: none;
+    color: var(--main-fg-color);
+}
+
+.github:visited {
+    text-decoration: none;
+    color: var(--main-fg-color);
+}
+
+.github:hover {
+    animation: colorCycle 2s infinite;
+}
+
+@keyframes colorCycle {
+    0% { color: red; }
+    20% { color: orange; }
+    40% { color: yellow; }
+    60% { color: greenyellow; }
+    80% { color: blue; }
+    100% { color: blueviolet; }
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+}
+
+.project:hover {
+    background-color: #1b1b1b;
+}
+
+.project p {
+    display: flex;
+    align-items: center;
+    margin: 25px;
+    color: var(--main-fg-color);
+    font-size: 18px;
+    line-height: 2;
+}
+
+.project img {
+    width: 40%;
+    height: 100%;
+    margin: 25px;
+}
+
+.project video {
+    width: 40%;
+    height: auto;
+    margin: 25px;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    color: #d7d7d7;
+    background-color: #181818;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    border-style: hidden;
+    width: 100%;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #181818;
+    color: #868686;
+}
+
+input[type=submit]:hover {
+    background-color: #D40000;
+    color: var(--main-fg-color);
+}
+
+.column {
+    margin: auto;
+    width: fit-content;
+    width: 50%;
+}
+
+.easterEggText {
+    color: var(--main-bg-color);
+}
+
+.easterEggText:hover {
+    color: var(--main-fg-color);
+}
+
+.minikit {
+    display: block;
+    margin-left: auto;
+    margin-right: calc(50% - 50px);
+    width: fit-content;
+    height: fit-content;
+}
+
+.minikitImg {
+    width: 50;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--main-bg-color);
+    color: var(--main-fg-color);
+    text-align: center;
+}
+
+.footer p {
+    font-size: 10;
+    display: block;
+    text-align: right;
+}

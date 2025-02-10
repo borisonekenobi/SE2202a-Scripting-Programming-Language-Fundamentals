@@ -1,0 +1,15 @@
+{
+    "name": "tutorial_6",
+    "version": "1.0.0",
+    "description": "",
+    "main": "constructorFunction.js",
+    "scripts": {
+      "test": "jest"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "jest": "^29.0.1"
+    }
+  }
+  
